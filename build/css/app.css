@@ -34,13 +34,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 1rem;
 }
 .container .card {
   width: 90%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   background: white;
   border-radius: 2rem;
   position: relative;
@@ -48,26 +47,33 @@ body {
 @media (min-width: 480px) {
   .container .card {
     width: 90%;
-    max-width: 40rem;
+    max-width: 35rem;
   }
 }
 @media (min-width: 992px) {
   .container .card {
     max-width: 80rem;
-    height: 25rem;
+    height: auto;
     flex-wrap: nowrap;
   }
 }
-.container .card .drawers {
+.container .card .img_card {
   width: 100%;
-  height: 20rem;
+}
+@media (min-width: 992px) {
+  .container .card .img_card {
+    width: 80%;
+    height: 25rem;
+  }
+}
+.container .card .img_card .drawers {
+  width: 100%;
+  height: 25rem;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
 }
 @media (min-width: 992px) {
-  .container .card .drawers {
-    width: 35%;
-    height: 25rem;
+  .container .card .img_card .drawers {
     border-bottom-left-radius: 2rem;
     border-top-right-radius: 0;
   }
@@ -95,7 +101,7 @@ body {
 }
 .container .card .card_footer {
   width: 100%;
-  height: 6rem;
+  height: 7rem;
   display: flex;
   align-items: center;
   position: relative;
@@ -127,13 +133,13 @@ body {
 }
 .container .card .card_footer .author .info_author .name_author {
   color: #48556a;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 0;
   padding-bottom: 0.5rem;
 }
 .container .card .card_footer .author .info_author .date {
   color: #6d7f97;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 .container .card .card_footer .author .img_author {
   width: 6rem;
@@ -146,7 +152,7 @@ body {
   background-color: #ecf2f8;
   position: absolute;
   right: 0;
-  margin-right: 2.5rem;
+  margin-right: 1.8rem;
   cursor: pointer;
 }
 .container .card .card_footer.active .share-icon {
